@@ -50,7 +50,8 @@ function fetchData(country) {
 		"https://api.covid19api.com/total/country/" +
 		  country +
 		  "/status/confirmed",
-		requestOptions
+		requestOptions,
+		{mode: "no-cors"}
 	  )
 		.then((res) => {
 		  return res.json();
@@ -66,7 +67,8 @@ function fetchData(country) {
 		"https://api.covid19api.com/total/country/" +
 		  country +
 		  "/status/recovered",
-		requestOptions
+		requestOptions,
+		{mode: "no-cors"}
 	  )
 		.then((res) => {
 		  return res.json();
@@ -79,7 +81,8 @@ function fetchData(country) {
   
 	  await fetch(
 		"https://api.covid19api.com/total/country/" + country + "/status/deaths",
-		requestOptions
+		requestOptions,
+		{mode: "no-cors"}
 	  )
 		.then((res) => {
 		  return res.json();
